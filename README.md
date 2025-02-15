@@ -17,3 +17,18 @@
 ├── alembic.ini
 ├── requirements.txt
 └── README.md
+
+**Create VE Python 3.10**
+```py -3.10 -m venv .venv```
+
+**Activate VE**
+```.venv\Scripts\activate```
+
+**Install Requirements**
+```pip install requirements.txt```
+
+**alembic workflow:**
+
+1. ```alembic init alembic```
+2. ```alembic revision -m "Create Users table"```
+3. ```alembic upgrade head```

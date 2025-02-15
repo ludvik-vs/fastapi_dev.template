@@ -16,9 +16,23 @@
 
 * ```uvicorn app.main\:app --reload```
 
+**.env**
+
+```DATABASE_URL=postgresql+psycopg2://user:pass@hos:port/dbname```
+
+```
+SECRET_KEY=your_secret_key
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
+
+**Ejemplo de flujo de trabajo:**
+
+1. ```alembic init alembic```
+2. ```alembic revision -m "Crear tabla de usuarios"```
+3. ```alembic upgrade head```
 
 **Comandos básicos alembic:**
-
 * ```alembic init <nombre_directorio>```: Inicializa Alembic en tu proyecto, creando un directorio para las migraciones y un archivo de configuración.
 * ```alembic revision --autogenerate -m "Verificando modelos"```: Crea una nueva revisión de migración con un mensaje descriptivo.
 * ```alembic upgrade head```: Aplica todas las migraciones pendientes a la base de datos.
@@ -33,9 +47,5 @@
 * ```alembic branches```: Muestra las ramas de migración.
 * ```alembic merge```: Fusiona dos o más ramas de migración.
 
-**Ejemplo de flujo de trabajo:**
 
-1. ```alembic init migrations```
-2. ```alembic revision -m "Crear tabla de usuarios"```
-3. ```alembic upgrade```
 

@@ -7,6 +7,9 @@
         "nullable",
         "onupdate",
         "poolclass",
-        "sessionmaker"
+        "Pydantic",
+        "reutilizables",
+        "sessionmaker",
+        "venv"
     ]
 }
