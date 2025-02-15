@@ -1,8 +1,10 @@
+from sqlalchemy.orm import Session
+from app.repositories.test_repository import TestRepository
 from app.schemas.test_schema import TestResponse
 
-def get_test_data() -> TestResponse:
+def get_test_data(db: Session) -> TestResponse:
     """
-    Lógica de negocio para el endpoint de prueba.
-    Aquí podrías agregar interacción con la base de datos o lógica adicional.
+    Lógica de negocio para obtener datos de prueba.
     """
-    return TestResponse(message="Hola desde FastAPI Dev Template!")
+    repository = TestRepository(db)
+    return repository.get_test_data()
