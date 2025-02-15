@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Importa tus modelos SQLAlchemy aquí
-from models import Base  # Asegúrate de importar tu Base de datos
+from app.models.models import Base  # Asegúrate de importar tu Base de datos
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
